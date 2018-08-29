@@ -11,54 +11,63 @@ document.addEventListener("DOMContentLoaded", function(event) {
   subImg0.style.backgroundImage = countryImg;
   subImg1.style.backgroundImage = brickImg;
 
-  subImg0.onclick = function() {
-    if(this.style.backgroundImage === countryImg && mainImgContainer.style.backgroundImage === bridgeImg) {
-      this.style.backgroundImage = bridgeImg;
+
+  function swapImages(subImg) {
+    if(subImg.style.backgroundImage === countryImg && mainImgContainer.style.backgroundImage === bridgeImg) {
+      subImg.style.backgroundImage = bridgeImg;
 
       mainImgContainer.style.backgroundImage = countryImg;
     }
-    else if(this.style.backgroundImage === bridgeImg && mainImgContainer.style.backgroundImage === countryImg) {
-      this.style.backgroundImage = countryImg;
+    else if(subImg.style.backgroundImage === bridgeImg && mainImgContainer.style.backgroundImage === countryImg) {
+      subImg.style.backgroundImage = countryImg;
 
       mainImgContainer.style.backgroundImage = bridgeImg;
     }
 
 
-    else if(this.style.backgroundImage === countryImg && mainImgContainer.style.backgroundImage === brickImg) {
-      this.style.backgroundImage = brickImg;
+    else if(subImg.style.backgroundImage === countryImg && mainImgContainer.style.backgroundImage === brickImg) {
+      subImg.style.backgroundImage = brickImg;
 
       mainImgContainer.style.backgroundImage = countryImg;
     }
-    else if(this.style.backgroundImage === brickImg && mainImgContainer.style.backgroundImage === countryImg) {
-      this.style.backgroundImage = countryImg;
+    else if(subImg.style.backgroundImage === brickImg && mainImgContainer.style.backgroundImage === countryImg) {
+      subImg.style.backgroundImage = countryImg;
 
       mainImgContainer.style.backgroundImage = brickImg;
     }
+
+
+    else if(subImg.style.backgroundImage === brickImg && mainImgContainer.style.backgroundImage === bridgeImg) {
+      subImg.style.backgroundImage = bridgeImg;
+
+      mainImgContainer.style.backgroundImage = brickImg;
+    }
+    else if(subImg.style.backgroundImage === bridgeImg && mainImgContainer.style.backgroundImage === brickImg) {
+      subImg.style.backgroundImage = brickImg;
+
+      mainImgContainer.style.backgroundImage = bridgeImg;
+    }
+
+
+    else if(subImg.style.backgroundImage === brickImg && mainImgContainer.style.backgroundImage === countryImg) {
+      subImg.style.backgroundImage = countryImg;
+
+      mainImgContainer.style.backgroundImage = brickImg;
+    }
+    else if(subImg.style.backgroundImage === countryImg && mainImgContainer.style.backgroundImage === brickImg) {
+      subImg.style.backgroundImage = brickImg;
+
+      mainImgContainer.style.backgroundImage = countryImg;
+    }
+  }
+
+
+  subImg0.onclick = function() {
+    swapImages(subImg0);
   };
 
   subImg1.onclick = function() {
-    if(this.style.backgroundImage === brickImg && mainImgContainer.style.backgroundImage === bridgeImg) {
-      this.style.backgroundImage = bridgeImg;
-
-      mainImgContainer.style.backgroundImage = brickImg;
-    }
-    else if(this.style.backgroundImage === bridgeImg && mainImgContainer.style.backgroundImage === brickImg) {
-      this.style.backgroundImage = brickImg;
-
-      mainImgContainer.style.backgroundImage = bridgeImg;
-    }
-
-
-    else if(this.style.backgroundImage === brickImg && mainImgContainer.style.backgroundImage === countryImg) {
-      this.style.backgroundImage = countryImg;
-
-      mainImgContainer.style.backgroundImage = brickImg;
-    }
-    else if(this.style.backgroundImage === countryImg && mainImgContainer.style.backgroundImage === brickImg) {
-      this.style.backgroundImage = brickImg;
-
-      mainImgContainer.style.backgroundImage = countryImg;
-    }
+    swapImages(subImg1);
   };
 
 });
