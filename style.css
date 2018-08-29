@@ -1,1 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
+  user-select: none;
+  cursor: default;
+}
+
+body {
+  height: 1200px;
+
+  color: rgb(51, 51, 51);
+}
+
+#main-section-sub-heading {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+
+  width: 900px;
+  margin: auto;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 18pt;
+  font-weight: 300;
+
+  /* border: 1px solid rgb(51, 51, 51); */
+}
+
+#main-section-heading {
+  position: absolute;
+  top: 54px;
+  left: 0;
+  right: 0;
+
+  width: 900px;
+  margin: auto;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 43pt;
+  font-weight: 300;
+
+  /* border: 1px solid rgb(51, 51, 51); */
+}
+
+#main-img-container {
+  position: absolute;
+  z-index: 10;
+  top: 145px;
+  left: 0;
+  right: 0;
+
+  width: 900px;
+  height: 500px;
+  margin: auto;
+
+  background-color: rgb(208, 211, 212);
+  background-image: url("https://bytebucket.org/orvis_ecommerce/interview-packet/raw/10cb207462ee5c1e72eba25b3077b80641a12b5c/images/photo07.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+#img-tile-heading {
+  position: absolute;
+  top: 649px;
+  left: 0;
+  right: 0;
+
+  width: 900px;
+  margin: auto;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 18pt;
+  font-weight: 700;
+
+  /* border: 1px solid rgb(51, 51, 51); */
+}
+
+#img-tile-caption {
+  position: absolute;
+  top: 675px;
+  left: 0;
+  right: 0;
+
+  width: 900px;
+  margin: auto;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 18pt;
+  font-weight: 300;
+
+  /* border: 1px solid rgb(51, 51, 51); */
+}
+
+#sub-img-container {
+  position: absolute;
+  z-index: 10;
+  top: 655px;
+  left: 0;
+  right: 0;
+
+  width: 900px;
+  height: 100px;
+  margin: auto;
+}
+
+#sub-img-0 {
+  position: absolute;
+  left: 744px;
+
+  width: 72px;
+  height: 57px;
+
+  background-color: rgb(208, 211, 212);
+  background-image: url("https://bytebucket.org/orvis_ecommerce/interview-packet/raw/10cb207462ee5c1e72eba25b3077b80641a12b5c/images/photo08.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(51, 51, 51);
+
+  cursor: pointer;
+}
+
+#sub-img-1 {
+  position: absolute;
+  left: 828px;
+
+  width: 72px;
+  height: 57px;
+
+  background-color: rgb(208, 211, 212);
+  background-image: url("https://bytebucket.org/orvis_ecommerce/interview-packet/raw/10cb207462ee5c1e72eba25b3077b80641a12b5c/images/photo04.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(51, 51, 51);
+
+  cursor: pointer;
+}
