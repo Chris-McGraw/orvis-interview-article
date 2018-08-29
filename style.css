@@ -55,20 +55,26 @@ body {
   margin: auto;
 
   background-color: rgb(208, 211, 212);
+  background-image: url("https://bytebucket.org/orvis_ecommerce/interview-packet/raw/10cb207462ee5c1e72eba25b3077b80641a12b5c/images/photo07.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   border: 1px solid rgb(51, 51, 51);
 }
 
 #main-img-container:before {
   position: absolute;
   top: 329px;
-  left: 753px;
+  left: 743px;
 
   content: "";
-  width: 65px;
+  width: 70px;
   height: 55px;
   margin-top: 180px;
 
-  background-color: blue;
+  background-color: rgb(208, 211, 212);
+  background-image: url("https://bytebucket.org/orvis_ecommerce/interview-packet/raw/10cb207462ee5c1e72eba25b3077b80641a12b5c/images/photo08.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   border: 1px solid rgb(51, 51, 51);
 
   cursor: pointer;
@@ -77,14 +83,17 @@ body {
 #main-img-container:after {
   position: absolute;
   top: 329px;
-  left: 832px;
+  left: 827px;
 
   content: "";
-  width: 65px;
+  width: 70px;
   height: 55px;
   margin-top: 180px;
 
-  background-color: yellow;
+  background-color: rgb(208, 211, 212);
+  background-image: url("https://bytebucket.org/orvis_ecommerce/interview-packet/raw/10cb207462ee5c1e72eba25b3077b80641a12b5c/images/photo04.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   border: 1px solid rgb(51, 51, 51);
 
   cursor: pointer;
