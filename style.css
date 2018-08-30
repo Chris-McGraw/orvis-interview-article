@@ -147,3 +147,61 @@ body {
 
   cursor: pointer;
 }
+
+
+/* -------------------- MEDIA QUERIES -------------------- */
+@media screen and (max-width: 965px) {
+  body {
+    background-color: lightGray;
+  }
+
+  #main-section-sub-heading {
+    width: 600px;
+  }
+
+  #main-section-heading {
+    width: 600px;
+  }
+
+  #main-img-container {
+    top: 145px;
+    left: 0;
+    right: 0;
+
+    width: 600px;
+    height: 400px;
+  }
+
+  #img-tile-heading {
+    top: 549px;
+
+    width: 600px;
+  }
+
+  #img-tile-caption {
+    top: 575px;
+
+    width: 600px;
+  }
+
+  #sub-img-container {
+    top: 555px;
+
+    width: 600px;
+  }
+
+  #sub-img-0-container {
+    left: 444px;
+  }
+
+  #sub-img-1-container {
+    left: 528px;
+  }
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+@media screen and (max-width: 665px) {
+  body {
+    background-color: blue;
+  }
+}
