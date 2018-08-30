@@ -148,6 +148,29 @@ body {
   cursor: pointer;
 }
 
+#main-article-container {
+  position: absolute;
+  top: 780px;
+  left: 0;
+  right: 0;
+
+  width: 900px;
+  margin: auto;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 18pt;
+  font-weight: 300;
+
+  /* border: 1px solid red; */
+}
+
+.article-text {
+  width: 740px;
+  margin-top: 26px;
+
+  /* border:1px solid blue; */
+}
+
 
 /* -------------------- MEDIA QUERIES -------------------- */
 @media screen and (max-width: 965px) {
