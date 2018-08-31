@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 /* ------------------------- Variable Declarations ------------------------- */
   var mainImg = document.getElementById("main-img");
+  var mainImgGhost = document.getElementById("main-img-ghost");
   var subImg0 = document.getElementById("sub-img-0");
   var subImg1 = document.getElementById("sub-img-1");
   var articleBlockTop = document.getElementById("article-block-top");
@@ -55,6 +56,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
 
+  function crossFade() {
+    mainImgGhost.classList.remove("fade-out");
+    mainImgGhost.style.opacity = "1.0";
+    mainImgGhost.src = mainImg.src;
+
+    setTimeout(function() {
+      mainImgGhost.classList.add("fade-out");
+    }, 0);
+  }
+
+
 /* ----------------------- Progressive Image Loading ----------------------- */
   setTimeout(function() {
     mainImg.src = bridgeImg;
@@ -89,10 +101,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   subImg0.onclick = function() {
+    crossFade();
     swapImages(subImg0);
   };
 
   subImg1.onclick = function() {
+    crossFade();
     swapImages(subImg1);
   };
 
