@@ -8,11 +8,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 /* ------------------------- Variable Declarations ------------------------- */
   var mainImg = document.getElementById("main-img");
+  var mainImgGhost = document.getElementById("main-img-ghost");
   var subImg0 = document.getElementById("sub-img-0");
+  var subImg0Ghost = document.getElementById("sub-img-0-ghost");
   var subImg1 = document.getElementById("sub-img-1");
+  var subImg1Ghost = document.getElementById("sub-img-1-ghost");
   var articleBlockTop = document.getElementById("article-block-top");
   var articleBlockBottom = document.getElementById("article-block-bottom");
   var articleBlockGhost = document.getElementById("article-block-ghost");
+  var suspendEventStart = false;
 
 
 /* ------------------------- Function Declarations ------------------------- */
@@ -55,6 +59,45 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
 
+  function crossFadeMain() {
+    suspendEventStart = true;
+
+    mainImgGhost.classList.remove("fade-out");
+    mainImgGhost.style.opacity = "1";
+    mainImgGhost.src = mainImg.src;
+
+    setTimeout(function() {
+      mainImgGhost.classList.add("fade-out");
+    }, 0);
+
+    setTimeout(function() {
+      suspendEventStart = false;
+    }, 800);
+  }
+
+
+  function crossFadeSub0() {
+    subImg0Ghost.classList.remove("fade-out");
+    subImg0Ghost.style.opacity = "1";
+    subImg0Ghost.src = subImg0.src;
+
+    setTimeout(function() {
+      subImg0Ghost.classList.add("fade-out");
+    }, 0);
+  }
+
+
+  function crossFadeSub1() {
+    subImg1Ghost.classList.remove("fade-out");
+    subImg1Ghost.style.opacity = "1.0";
+    subImg1Ghost.src = subImg1.src;
+
+    setTimeout(function() {
+      subImg1Ghost.classList.add("fade-out");
+    }, 0);
+  }
+
+
 /* ----------------------- Progressive Image Loading ----------------------- */
   setTimeout(function() {
     mainImg.src = bridgeImg;
@@ -88,12 +131,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  subImg0.onclick = function() {
-    swapImages(subImg0);
+  subImg0Ghost.onclick = function() {
+    if(suspendEventStart === false) {
+      crossFadeMain();
+      crossFadeSub0();
+      swapImages(subImg0);
+    }
   };
 
-  subImg1.onclick = function() {
-    swapImages(subImg1);
+  subImg1Ghost.onclick = function() {
+    if(suspendEventStart === false) {
+      crossFadeMain();
+      crossFadeSub1();
+      swapImages(subImg1);
+    }
   };
 
 });
