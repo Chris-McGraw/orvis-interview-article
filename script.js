@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var articleBlockTop = document.getElementById("article-block-top");
   var articleBlockBottom = document.getElementById("article-block-bottom");
   var articleBlockGhost = document.getElementById("article-block-ghost");
+  var suspendEventStart = false;
 
 
 /* ------------------------- Function Declarations ------------------------- */
@@ -59,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
   function crossFadeMain() {
+    suspendEventStart = true;
+
     mainImgGhost.classList.remove("fade-out");
     mainImgGhost.style.opacity = "1";
     mainImgGhost.src = mainImg.src;
@@ -66,6 +69,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     setTimeout(function() {
       mainImgGhost.classList.add("fade-out");
     }, 0);
+
+    setTimeout(function() {
+      suspendEventStart = false;
+    }, 800);
   }
 
 
@@ -125,15 +132,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   subImg0Ghost.onclick = function() {
-    crossFadeMain();
-    crossFadeSub0();
-    swapImages(subImg0);
+    if(suspendEventStart === false) {
+      crossFadeMain();
+      crossFadeSub0();
+      swapImages(subImg0);
+    }
   };
 
   subImg1Ghost.onclick = function() {
-    crossFadeMain();
-    crossFadeSub1();
-    swapImages(subImg1);
+    if(suspendEventStart === false) {
+      crossFadeMain();
+      crossFadeSub1();
+      swapImages(subImg1);
+    }
   };
 
 });
